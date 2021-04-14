@@ -12,6 +12,8 @@ import usb_midi
 import adafruit_midi
 from adafruit_midi.note_off         import NoteOff
 from adafruit_midi.note_on          import NoteOn
+from adafruit_debouncer import Debouncer
+
 
 midi = adafruit_midi.MIDI(midi_out=usb_midi.ports[1], out_channel=0)
 
@@ -26,15 +28,24 @@ midi_base_note = 48   # C3
 midi_velocity = 64    # midpoint
 
 touch_keys = []
+touch_dbs = []
 for pin in touch_pins:
     touch = touchio.TouchIn(pin)
     touch_keys.append(touch)
+    touch_dbs.append( Debouncer(touch) )
 
 while True:
     print(":")
     for i in range(len(touch_keys)):
-        if t[i].value:
-            print("touch ",i)
+        t = touch_dbs[i]
+        touch.update()
+        if touch.rose:
             midi.send( NoteOn(midi_base_note + i, midi_velocity) )
-                            
+        if touch.fell:
+            midi.send( NoteOff(midi_base_note + i, midi_velocity) )
+
+    # for i in range(len(touch_keys)):
+    #     if t[i].value:
+    #         print("touch ",i)
+    #         midi.send( NoteOn(midi_base_note + i, midi_velocity) )
     time.sleep(0.1)
