@@ -940,7 +940,7 @@
 <text x="-2.794" y="6.858" size="1.27" layer="21">&gt;Name</text>
 </package>
 <package name="TOUCHPADB" library_version="28" library_locally_modified="yes">
-<smd name="TP" x="0" y="0" dx="6.4516" dy="3.2512" layer="1" roundness="33"/>
+<smd name="TP" x="0" y="0" dx="6.4516" dy="3.2512" layer="1" roundness="16" stop="no"/>
 <text x="-3.048" y="1.905" size="1.27" layer="21">&gt;Name</text>
 </package>
 </packages>
