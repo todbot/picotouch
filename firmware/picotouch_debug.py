@@ -1,20 +1,3 @@
-#
-# picotouch_code.py -- Tiny capsense MIDI controller using Pico
-# 2021 - @todbot / Tod Kurt - github.com/todbot/picotouch
-#
-# To use:
-#
-# 1. Install needed libraries:
-#   circup install adafruit_midi adafruit_debouncer
-# 2. Copy over this file as code.py:
-#   cp picotouch_code.py /Volumes/CIRCUITPY/code.py# 
-#
-# on Pico / RP2040, need 1M pull-down on each input
-#
-
-import time
-import board
-import touchio
 import usb_midi
 import adafruit_midi
 from adafruit_midi.note_off import NoteOff
@@ -25,6 +8,8 @@ midi_base_note = 48   # 48 = C3
 midi_velocity = 64    # midpoint
 
 touch_threshold_adjust = 500
+
+debug = False
 
 midi = adafruit_midi.MIDI(midi_out=usb_midi.ports[1], out_channel=0)
 
@@ -47,6 +32,13 @@ for pin in touch_pins:
 print("\n----------")
 print("picotouch hello")
 while True:
+    if debug:
+        for i in range(len(touch_ins)):
+            touchin = touch_ins[i]
+            print(touchin.raw_value,', ', end='')
+        print()
+        time.sleep(0.01)
+
     for i in range(len(touchs)):
         touch = touchs[i]
         touch.update()
@@ -56,4 +48,3 @@ while True:
         if touch.fell:
             print("release",i)
             midi.send( NoteOff(midi_base_note + i, midi_velocity) )
-
