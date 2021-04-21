@@ -7,7 +7,7 @@ Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
 
 
 # Materials needed
-- 1 - picotouch PCB (oshpark link soon)
+- 1 - picotouch PCB ([order from OSHpark](https://oshpark.com/shared_projects/5MnI1jPf))
 - 1 - Raspberry Pi Pico
 - 22 - 1M ohm 0805 SMD resistors
 
