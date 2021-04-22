@@ -14,19 +14,24 @@
 
 import time
 import board
+from digitalio import DigitalInOut, Pull, Direction
 import touchio
 import usb_midi
 import adafruit_midi
 from adafruit_midi.note_off import NoteOff
 from adafruit_midi.note_on  import NoteOn
+from adafruit_midi.pitch_bend  import PitchBend
+from adafruit_midi.control_change  import ControlChange
 from adafruit_debouncer import Debouncer
 
 midi_base_note = 48   # 48 = C3
 midi_velocity = 64    # midpoint
+midi_channel = 0
+midi_cc_num = 1  # standard modwheel
 
 touch_threshold_adjust = 500
 
-midi = adafruit_midi.MIDI(midi_out=usb_midi.ports[1], out_channel=0)
+midi = adafruit_midi.MIDI(midi_out=usb_midi.ports[1])
 
 touch_pins = (
     board.GP0, board.GP1, board.GP2, board.GP3, board.GP4, board.GP5,
@@ -35,6 +40,16 @@ touch_pins = (
     board.GP18, board.GP19, board.GP20, board.GP21,
     board.GP22,
 )
+
+led = DigitalInOut(board.LED) # defaults to input
+led.direction = Direction.OUTPUT
+
+pitch_up_index = 22
+pitch_down_index = 21
+mod_up_index = 19
+mod_down_index = 18
+chan_up_index = 20
+chan_down_index = 17
 
 touch_ins = []
 touchs = []
@@ -51,9 +66,52 @@ while True:
         touch = touchs[i]
         touch.update()
         if touch.rose:
-            print("press",i)
-            midi.send( NoteOn(midi_base_note + i, midi_velocity) )
+            led.value = True
+            if i == chan_up_index:
+                print('chan up!')
+                midi_channel = min( midi_channel+1, 15)
+            elif i == chan_down_index:
+                print('chan down!')
+                midi_channel = max( midi_channel-1, 0)
+            elif i == pitch_up_index:
+                print('pitch up!')
+                pitchbend_val = 8192 + 4096
+                midi.send( PitchBend(pitchbend_val), channel=midi_channel)
+            elif i == pitch_down_index:
+                print('pitch down!')
+                pitchbend_val = 8192 - 4096
+                midi.send( PitchBend(pitchbend_val), channel=midi_channel)
+            elif i == mod_up_index:
+                print('mod up!')
+                modwheel_val = 127
+                midi.send( ControlChange(midi_cc_num, modwheel_val), channel=midi_channel)
+            elif i == mod_down_index:
+                print('mod down!')
+                modwheel_val = 0
+                midi.send( ControlChange(midi_cc_num, modwheel_val), channel=midi_channel)
+            else:
+                midi.send( PitchBend(8192) , channel=midi_channel)
+                midi.send( NoteOn(midi_base_note + i, midi_velocity), channel=midi_channel )
         if touch.fell:
+            led.value = False
             print("release",i)
-            midi.send( NoteOff(midi_base_note + i, midi_velocity) )
+            if i == chan_up_index:
+                pass
+            elif i == chan_down_index:
+                pass
+            elif i == pitch_up_index:
+                pitchbend_val = 8192
+                midi.send( PitchBend(pitchbend_val), channel=midi_channel)
+            elif i == pitch_down_index:
+                pitchbend_val = 8192
+                midi.send( PitchBend(pitchbend_val), channel=midi_channel)
+            elif i == mod_up_index:
+                modwheel_val = 0
+                midi.send( ControlChange(midi_cc_num, modwheel_val), channel=midi_channel)
+            elif i == mod_down_index:
+                modwheel_val = 0
+                midi.send( ControlChange(midi_cc_num, modwheel_val), channel=midi_channel)
+
+            else:
+                midi.send( NoteOff(midi_base_note + i, midi_velocity), channel=midi_channel )
 
