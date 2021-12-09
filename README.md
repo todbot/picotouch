@@ -8,6 +8,7 @@ Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
 ## Demo
 https://user-images.githubusercontent.com/274093/115614719-dfea2d80-a2a2-11eb-9ef7-c71edfc8e3df.mp4
 
+Also see videos in this Twitter thread : https://twitter.com/todbot/status/1382469033061093377
 
 ## Materials needed
 - 1 - picotouch PCB ([order from OSHpark](https://oshpark.com/shared_projects/5MnI1jPf))
