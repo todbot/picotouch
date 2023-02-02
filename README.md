@@ -2,7 +2,7 @@
 
 Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
 
-<img width=700 src="./docs/picotouch_top1.png"/>
+<img width=700 src="./docs/picotouch_smd_top1.png"/>
 <img width=700 src="./docs/picotouch_top2.png"/>
 
 ## Demo
@@ -19,12 +19,12 @@ Also see videos in this Twitter thread : https://twitter.com/todbot/status/13824
 ## Installation
 
 - Install CircuitPython
-  - Hold down BOOT button while plugging in Pico to get RPI-RP2 drive 
+  - Hold down BOOT button while plugging in Pico to get RPI-RP2 drive
   - Download CircuitPython UF2 from https://circuitpython.org/board/raspberry_pi_pico/
   - Drag UF2 to RPI-RP2 drive. CircuitPython is now installed!
 
 - Install Needed CircuitPython libraries onto Pico
-  - If you have Python on your computer you can do:   
+  - If you have Python on your computer you can do:
   ```
   pip3 install circup
   circup install adafruit_midi adafruit_debouncer
