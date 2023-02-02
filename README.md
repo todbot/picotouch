@@ -5,7 +5,14 @@ Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
 <img width=700 src="./docs/picotouch_smd_top1.png"/>
 <img width=700 src="./docs/picotouch_top2.png"/>
 
-## Demo
+[For sale on Tindie!](https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/)
+
+## Demos
+
+
+https://user-images.githubusercontent.com/274093/216477797-90a1e4ca-b68f-4eb2-be46-de1d6d81551e.mp4
+
+
 https://user-images.githubusercontent.com/274093/115614719-dfea2d80-a2a2-11eb-9ef7-c71edfc8e3df.mp4
 
 Also see videos in this Twitter thread : https://twitter.com/todbot/status/1382469033061093377
