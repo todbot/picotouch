@@ -7,7 +7,7 @@
 # 1. Install needed libraries:
 #   circup install adafruit_midi adafruit_debouncer
 # 2. Copy over this file as code.py:
-#   cp picotouch_code.py /Volumes/CIRCUITPY/code.py# 
+#   cp picotouch_code.py /Volumes/CIRCUITPY/code.py#
 #
 # on Pico / RP2040, need 1M pull-down on each input
 #
@@ -48,8 +48,8 @@ pitch_up_index = 22
 pitch_down_index = 21
 mod_up_index = 19
 mod_down_index = 18
-chan_up_index = 20
-chan_down_index = 17
+oct_up_index = 20
+oct_down_index = 17
 
 touch_ins = []
 touchs = []
@@ -67,12 +67,12 @@ while True:
         touch.update()
         if touch.rose:
             led.value = True
-            if i == chan_up_index:
-                print('chan up!')
-                midi_channel = min( midi_channel+1, 15)
-            elif i == chan_down_index:
-                print('chan down!')
-                midi_channel = max( midi_channel-1, 0)
+            if i == oct_up_index:
+                print('oct up!')
+                midi_base_note = min( midi_base_note + 12, 108)
+            elif i == oct_down_index:
+                print('oct down!')
+                midi_base_note = max( midi_base_note - 12, 0)
             elif i == pitch_up_index:
                 print('pitch up!')
                 pitchbend_val = 8192 + 4096
@@ -95,9 +95,9 @@ while True:
         if touch.fell:
             led.value = False
             print("release",i)
-            if i == chan_up_index:
+            if i == oct_up_index:
                 pass
-            elif i == chan_down_index:
+            elif i == oct_down_index:
                 pass
             elif i == pitch_up_index:
                 pitchbend_val = 8192
@@ -114,4 +114,3 @@ while True:
 
             else:
                 midi.send( NoteOff(midi_base_note + i, midi_velocity), channel=midi_channel )
-
