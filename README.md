@@ -45,10 +45,10 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
   - If you have Python on your computer you can do:
   ```
   pip3 install circup
-  circup install adafruit_midi adafruit_debouncer
+  circup install adafruit_midi adafruit_debouncer adafruit_ticks
   ```
   - Otherwise, download the CircuitPython Libraries Bundle at https://circuitpython.org/libraries
-    and copy over the `adafruit_midi` and `adafruit_debouncer` libraries
+    and copy over the `adafruit_midi`, `adafruit_debouncer`, & `adafruit_ticks` libraries
 
 - Copy over `code.py`
   - Via commandline:
