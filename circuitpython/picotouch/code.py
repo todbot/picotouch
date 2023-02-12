@@ -16,6 +16,7 @@
 import time
 import board
 import touchio
+import digitalio
 import usb_midi
 import adafruit_midi
 from adafruit_midi.note_off import NoteOff
@@ -44,8 +45,8 @@ touch_pins = (
     board.GP22,
 )
 
-led = DigitalInOut(board.LED) # defaults to input
-led.direction = Direction.OUTPUT
+led = digitalio.DigitalInOut(board.LED) # defaults to input
+led.direction = digitalio.Direction.OUTPUT
 
 # special keys that aren't notes
 pitch_up_key = 22

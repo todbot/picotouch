@@ -36,7 +36,7 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
 
 ## Installation
 
-- Install CircuitPython
+1. Install CircuitPython
   - Hold down BOOT button while plugging in Pico to get RPI-RP2 drive
   - Download CircuitPython UF2 from https://circuitpython.org/board/raspberry_pi_pico/
   - Drag UF2 to RPI-RP2 drive. CircuitPython is now installed!
