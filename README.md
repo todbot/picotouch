@@ -27,7 +27,7 @@ Also see videos in this Twitter thread : https://twitter.com/todbot/status/13824
 ## How to solder
 
 It's not too bad!  A pretty easy first-time SMD soldering project.  Here's how to solder the Pico down.
-The technique is: line up the Pico solder one corner, solder the other, then finish all the rest. 
+The technique is: line up the Pico solder one corner, solder the other, then finish all the rest.
 In the video you see I don't get it aligned perfectly straight (hard to see around the camera), but it still works great!
 
 https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-bea7-4985d2b3f8c4.mp4
@@ -53,8 +53,8 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
 - Copy over `code.py`
   - Via commandline:
   ```
-  cp picotouch/firmare/picotouch_code.py /Volumes/CIRCUITPY/code.py
+  cp picotouch/circuitpython/picotouch/code.py /Volumes/CIRCUITPY/code.py
   ```
-  - Or you can drag-n-drop using your computer's GUI, then rename to `code.py`
-  - Note: this will delete the previous `code.py` on your Pico. 
+  - Or you can drag-n-drop using your computer's GUI
+  - Note: this will delete the previous `code.py` on your Pico.
       Normally this is fine, but if it's not, be sure to save it if you want to keep it!

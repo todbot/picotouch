@@ -1,20 +1,20 @@
 #
 # picotouch code.py -- Tiny capsense MIDI controller using Raspberry Pi Pico
-# 2022 - @todbot / Tod Kurt - github.com/todbot/picotouch
+# 2021-2023 - @todbot / Tod Kurt - github.com/todbot/picotouch
 #
 # To use:
 #
 # 1. Install needed libraries:
-#   circup install adafruit_midi adafruit_debouncer
-# 2. Copy over this file as code.py:
-#   cp picotouch_code.py /Volumes/CIRCUITPY/code.py
+#   circup install adafruit_midi adafruit_debouncer adafruit_ticks
 #
-# on Pico / RP2040, need 1M pull-down on each input
+# 2. Copy over this file as code.py:
+#   cp picotouch/code.py /Volumes/CIRCUITPY/code.py
+#
+# on Pico / RP2040, need 1M pull-down on each input  (picotouch board has this)
 #
 
 import time
 import board
-from digitalio import DigitalInOut, Pull, Direction
 import touchio
 import usb_midi
 import adafruit_midi
