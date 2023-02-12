@@ -36,25 +36,25 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
 
 ## Installation
 
-1. Install CircuitPython
+* Install CircuitPython
   - Hold down BOOT button while plugging in Pico to get RPI-RP2 drive
   - Download CircuitPython UF2 from https://circuitpython.org/board/raspberry_pi_pico/
   - Drag UF2 to RPI-RP2 drive. CircuitPython is now installed!
 
-- Install Needed CircuitPython libraries onto Pico
+* Install CircuitPython libraries onto Pico
   - If you have Python on your computer you can do:
-  ```
-  pip3 install circup
-  circup install adafruit_midi adafruit_debouncer adafruit_ticks
-  ```
+    ```
+    pip3 install circup
+    circup install adafruit_midi adafruit_debouncer adafruit_ticks
+    ```
   - Otherwise, download the CircuitPython Libraries Bundle at https://circuitpython.org/libraries
     and copy over the `adafruit_midi`, `adafruit_debouncer`, & `adafruit_ticks` libraries
 
-- Copy over `code.py`
+* Install picotouch `code.py`
   - Via commandline:
-  ```
-  cp picotouch/circuitpython/picotouch/code.py /Volumes/CIRCUITPY/code.py
-  ```
+    ```
+    cp picotouch/circuitpython/picotouch/code.py /Volumes/CIRCUITPY/code.py
+    ```
   - Or you can drag-n-drop using your computer's GUI
   - Note: this will delete the previous `code.py` on your Pico.
       Normally this is fine, but if it's not, be sure to save it if you want to keep it!
