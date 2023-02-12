@@ -56,3 +56,5 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
   cp picotouch/firmare/picotouch_code.py /Volumes/CIRCUITPY/code.py
   ```
   - Or you can drag-n-drop using your computer's GUI, then rename to `code.py`
+  - Note: this will delete the previous `code.py` on your Pico. 
+      Normally this is fine, but if it's not, be sure to save it if you want to keep it!
