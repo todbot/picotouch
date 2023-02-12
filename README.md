@@ -49,6 +49,7 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
     ```
   - Otherwise, download the CircuitPython Libraries Bundle at https://circuitpython.org/libraries
     and copy over the `adafruit_midi`, `adafruit_debouncer`, & `adafruit_ticks` libraries
+    to the `CIRCUITPY/lib` folder on the Pico.
 
 * Install picotouch `code.py`
   - Via commandline:
