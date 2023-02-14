@@ -1,13 +1,29 @@
 #
-# picotouch_code.py -- Tiny capsense MIDI controller using Pico
-# 2021 - @todbot / Tod Kurt - github.com/todbot/picotouch
+# picotouch_midislider.py -- Tiny capsense MIDI slider controller using Pico
+# 2023 - @todbot / Tod Kurt - github.com/todbot/picotouch
+#
+# Turns the three key regions into the MIDI CC sliders!
+#
+#    picotouch board
+#   ┌──────────────────────────────────────────────────────────────────────────────────────────┐
+#   │     .─.   .─.          .─.   .─.   .─.          .─.   .─.                                │
+#   │    ( 1 ) ( 3 )        ( 6 ) ( 8 ) ( 10)        ( 13) ( 15)                               │
+#   │     `─'   `─'          `─'   `─'   `─'          `─'   `─'                                │
+#   │  .─.   .─.   .─.    .─.   .─.   .─.   .─.    .─.   .─.   .─.                             │
+#   │ ( 0 ) ( 2 ) ( 4 )  ( 5 ) ( 7 ) ( 9 ) ( 11)  ( 12) ( 14) ( 16)                            │
+#   │  `─'   `─'   `─'    `─'   `─'   `─'   `─'    `─'   `─'   `─'                             │
+#   └──────────────────────────────────────────────────────────────────────────────────────────┘
+#     [---------------]  [---------------------]  [---------------]
+#         slider0              slider1               slider2
+#           CC 1                 CC 71                 CC 72
 #
 # To use:
 #
 # 1. Install needed libraries:
-#   circup install adafruit_midi adafruit_debouncer
+#   circup install adafruit_midi adafruit_debouncer adafruit_ticks
+#
 # 2. Copy over this file as code.py:
-#   cp picotouch_code.py /Volumes/CIRCUITPY/code.py#
+#   cp code.py /Volumes/CIRCUITPY/code.py
 #
 # on Pico / RP2040, need 1M pull-down on each input
 #
@@ -23,10 +39,10 @@ import adafruit_midi
 from adafruit_midi.control_change  import ControlChange
 from adafruit_debouncer import Debouncer
 
-# which MIDI CCs for which slider
+# Whch MIDI CCs for which slider?  Edit to taste
 sliders_CCs = (  1, 71, 72, )
 
-# map of pin ids to slider number & position
+# Map of pad ids to slider number & position
 sliders_ids = (
     (0, 1, 2, 3, 4),         # slider 0
     (5, 6, 7, 8, 9 ,10, 11), # slider 1
@@ -50,7 +66,6 @@ touch_pins = (
 num_sliders = len(sliders_ids) # how many sliders we got
 sliders_pos = [ 0 ] * num_sliders  # one entry per slider  # range from 0-1 float
 sliders_pos_last = [ 0 ] * num_sliders  # one entry per slider
-sliders_pressed = [ 0 ] * num_sliders
 fade_amount = 0.75  # how much to filter changes
 fade_last_millis = ticks_ms()
 fade_step = 20  # millisecs between fade steps
@@ -101,16 +116,9 @@ while True:
             for j in range(num_sliders):
                 slider_ids = sliders_ids[j]
                 if i in slider_ids:
-                    slider_pos = (slider_ids.index(i)+1) / len(slider_ids)
+                    # convert pad index to slider position 0..1, sorta
+                    slider_pos = (slider_ids.index(i)) / len(slider_ids)
                     sliders_pos[j] = slider_pos
-                    print("\t\t\t\tslider #",j, ":", slider_pos, sliders_pressed[j])
-                    sliders_pressed[j] +=1
+                    print("\t\t\t\tslider #",j, ":", slider_pos)
         if touch.fell:
             led.value = False
-            for j in range(num_sliders):
-                slider_ids = sliders_ids[j]
-                if i in slider_ids:
-                    sliders_pressed[j] -=1
-                    if sliders_pressed[j] == 0:
-                        sliders_pos[j] = 0   # no slider parts pressedd
-                    if debug: print(slider_pos)
