@@ -18,6 +18,8 @@ https://user-images.githubusercontent.com/274093/115614719-dfea2d80-a2a2-11eb-9e
 
 Also see videos in this Twitter thread : https://twitter.com/todbot/status/1382469033061093377
 
+And check out [videos on my Youtube channel](https://www.youtube.com/@todbot/videos)
+
 ## Materials needed
 - 1 - picotouch PCB ([order from OSHpark](https://oshpark.com/shared_projects/5MnI1jPf))
 - 1 - Raspberry Pi Pico
@@ -59,3 +61,21 @@ https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-be
   - Or you can drag-n-drop using your computer's GUI
   - Note: this will delete the previous `code.py` on your Pico.
       Normally this is fine, but if it's not, be sure to save it if you want to keep it!
+
+
+## Going further
+
+There's other things you can do with the picotouch board.
+
+- Use it as a MIDI slider bank
+
+    Install
+   [`picotouch_midislider/code.py`](https://github.com/todbot/picotouch/blob/main/circuitpython/picotouch_midislider/code.py) instead of the regular picotouch code.py.
+
+   [midislider demo video](https://youtu.be/1Psw3PLqYS8)
+
+- Use it as a HID keyboard macropad
+
+   [`picotouch_macropad/code.py`](https://github.com/todbot/picotouch/blob/main/circuitpython/picotouch_macropad/code.py)
+
+   It's early days, but it's a start at that idea
