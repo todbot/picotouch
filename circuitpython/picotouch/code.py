@@ -19,7 +19,6 @@ import touchio
 import digitalio
 import usb_midi
 import adafruit_midi
-from adafruit_midi.note_off import NoteOff
 from adafruit_midi.note_on  import NoteOn
 from adafruit_midi.pitch_bend  import PitchBend
 from adafruit_midi.control_change  import ControlChange
@@ -67,6 +66,8 @@ for pin in touch_pins:
     touch_ins.append(touchin)  # for debug
 num_touch_pads = len(touch_pads)
 
+notes_on = [0] * num_touch_pads  # list of notes currently sounding
+
 print("\n----------")
 print("picotouch hello")
 
@@ -101,7 +102,9 @@ while True:
                 print('oct down!', octave)
             else:
                 midi.send( PitchBend(8192) , channel=midi_channel)
-                midi.send( NoteOn((12*octave) + i, midi_velocity), channel=midi_channel )
+                noteOn = NoteOn((12*octave) + i, midi_velocity)
+                notes_on[i] = noteOn
+                midi.send( noteOn, channel=midi_channel )
 
         if touch.fell:
             led.value = False
@@ -123,4 +126,6 @@ while True:
             elif i == oct_dn_key:
                 pass
             else:
-                midi.send( NoteOff((12*octave) + i, midi_velocity), channel=midi_channel )
+                noteOn = notes_on[i]
+                noteOn.velocity = 0  # noteOff == noteOn w/ zero velocity (as well as NoteOff)
+                midi.send( noteOn, channel=midi_channel )
