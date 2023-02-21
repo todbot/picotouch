@@ -32,15 +32,11 @@ for pin in touch_pins:
     touchin = touchio.TouchIn(pin)
     touchin.threshold += touch_threshold_adjust
     touchins.append(touchin)
-    touchs.append( Debouncer(touchin) )
 
 print("\n----------")
 print("picotouch_test hello")
 while True:
     for i in range(len(touchs)):
         touch = touchs[i]
-        touch.update()
-        if touch.rose:
-            print("press",i)
-        if touch.fell:
-            print("release",i)
+        print("%d  " % touch.value[i], end='')
+    print()
