@@ -79,3 +79,8 @@ There's other things you can do with the picotouch board.
    [`picotouch_macropad/code.py`](https://github.com/todbot/picotouch/blob/main/circuitpython/picotouch_macropad/code.py)
 
    It's early days, but it's a start at that idea
+
+
+## Press
+
+- https://www.hackster.io/news/tod-kurt-s-ultra-slim-picotouch-is-a-button-free-23-key-raspberry-pi-pico-powered-midi-keyboard-700a3ce2227b

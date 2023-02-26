@@ -22,11 +22,11 @@ class TouchMatrix:
         self.touch_rows = []
         for pin in col_pins:
             touchin = touchio.TouchIn(pin)
-            touchin.threshold += touch_threshold_adjust_col
+            touchin.threshold += threshold_adjust_col
             self.touch_cols.append(touchin)
         for pin in row_pins:
             touchin = touchio.TouchIn(pin)
-            touchin.threshold += touch_threshold_adjust_row
+            touchin.threshold += threshold_adjust_row
             self.touch_rows.append(touchin)
         self.num_touch_cols = len(self.touch_cols)
         self.num_touch_rows = len(self.touch_rows)
