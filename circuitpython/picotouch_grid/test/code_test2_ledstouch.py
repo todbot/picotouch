@@ -1,5 +1,6 @@
+# picotouch_grid test2_leds -- testing touch pads w/ touchio and LEDs
 #
-#
+# 21 Feb 2023 - @todbot / Tod Kurt
 #
 #
 
@@ -9,11 +10,11 @@ import touchio
 import neopixel
 import rainbowio
 
-touch_row_pins = (
+touch_col_pins = (
     board.GP0, board.GP1, board.GP2, board.GP3, board.GP4, board.GP5,
     board.GP6, board.GP7, board.GP8, board.GP9
 )
-touch_col_pins = ( board.GP10, board.GP11, board.GP12, board.GP13, )
+touch_row_pins = ( board.GP10, board.GP11, board.GP12, board.GP13, )
 neopixel_pin = board.GP28
 
 class TouchMatrix:
@@ -31,19 +32,18 @@ class TouchMatrix:
         self.num_touch_cols = len(self.touch_cols)
         self.num_touch_rows = len(self.touch_rows)
 
-    # fixme: better name for this
-    def check(self):
+    def update(self):
         col_pressed, row_pressed = None,None
-        for i in range(self.num_touch_cols):
-            if self.touch_cols[i].value:
-                col_pressed = i
         for i in range(self.num_touch_rows):
             if self.touch_rows[i].value:
                 row_pressed = i
+        for i in range(self.num_touch_cols):
+            if self.touch_cols[i].value:
+                col_pressed = i
         return (col_pressed,row_pressed)
 
 
-print("picotouch_grid test hello")
+print("picotouch_grid test2_leds hello")
 print("\n----------")
 
 touch_matrix = TouchMatrix( col_pins=touch_col_pins, row_pins=touch_row_pins )
@@ -55,9 +55,9 @@ dim_by = 5
 while True:
     leds[:] = [[max(i-dim_by,0) for i in l] for l in leds] # dim all by (dim_by,dim_by,dim_by)
 
-    (col,row) = touch_matrix.check()
+    (col,row) = touch_matrix.update()
     if col is not None and row is not None:
-        print("touch! col=",col,"row=",row)
-        p = (col*10) + row # create number 0-39
+        p = (row*10) + col # create number 0-39
+        print("touch! col=",col,"row=",row, "led:",p)
         h = int(p * (256/40))  # map to 0-255
         leds[p] = rainbowio.colorwheel( time.monotonic() * 50 )
