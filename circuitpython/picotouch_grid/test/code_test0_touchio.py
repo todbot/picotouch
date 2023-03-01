@@ -8,19 +8,19 @@ import time
 import board
 import touchio
 
-row_threshold_adjust = 10
 col_threshold_adjust = -100
+row_threshold_adjust = 10
 
-touch_pins_rows = (
-    board.GP10, board.GP11, board.GP12, board.GP13,
-)
 touch_pins_cols = (
     board.GP0, board.GP1, board.GP2, board.GP3, board.GP4, board.GP5,
     board.GP6, board.GP7, board.GP8, board.GP9,
 )
+touch_pins_rows = (
+    board.GP10, board.GP11, board.GP12, board.GP13,
+)
 
-touch_rows = []
 touch_cols = []
+touch_rows = []
 
 for pin in touch_pins_cols:
     touchin = touchio.TouchIn(pin)
