@@ -12091,6 +12091,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="17" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
 <part name="18" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
 <part name="19" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
+<part name="3V3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
+<part name="+3V86" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="NEOPIXEL" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
+<part name="3VM" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
+<part name="M" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP15R" package3d_urn="urn:adsk.eagle:package:27968/1" value="TPTP15R"/>
 </parts>
 <sheets>
 <sheet>
@@ -13085,6 +13092,32 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="158.75" y="189.23" size="1.778" layer="95" rot="R270"/>
 <attribute name="TP_SIGNAL_NAME" x="156.21" y="186.69" size="1.778" layer="97" rot="R270"/>
 </instance>
+<instance part="3V3" gate="G$1" x="45.72" y="231.14" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.45" y="232.41" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="46.99" y="232.41" size="1.778" layer="97" rot="R90"/>
+</instance>
+<instance part="+3V86" gate="G$1" x="50.8" y="231.14" smashed="yes" rot="R270">
+<attribute name="VALUE" x="57.658" y="232.156" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND" gate="G$1" x="45.72" y="220.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.45" y="219.71" size="1.778" layer="95" rot="R90"/>
+<attribute name="TP_SIGNAL_NAME" x="46.99" y="222.25" size="1.778" layer="97" rot="R90"/>
+</instance>
+<instance part="GND2" gate="1" x="50.8" y="220.98" smashed="yes" rot="R90">
+<attribute name="VALUE" x="53.34" y="218.44" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="NEOPIXEL" gate="G$1" x="45.72" y="226.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.45" y="227.33" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="46.99" y="227.33" size="1.778" layer="97" rot="R90"/>
+</instance>
+<instance part="3VM" gate="G$1" x="53.34" y="127" smashed="yes" rot="R180">
+<attribute name="NAME" x="52.07" y="125.73" size="1.778" layer="95" rot="R270"/>
+<attribute name="TP_SIGNAL_NAME" x="52.07" y="128.27" size="1.778" layer="97" rot="R180"/>
+</instance>
+<instance part="M" gate="G$1" x="53.34" y="154.94" smashed="yes">
+<attribute name="NAME" x="54.61" y="156.21" size="1.778" layer="95" rot="R90"/>
+<attribute name="TP_SIGNAL_NAME" x="54.61" y="153.67" size="1.778" layer="97"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13612,6 +13645,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="60.96" y="213.36"/>
 <junction x="60.96" y="208.28"/>
 </segment>
+<segment>
+<pinref part="GND" gate="G$1" pin="TP"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -13957,6 +13994,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="+3V85" gate="G$1" pin="+3V3"/>
 <pinref part="J2" gate="G$1" pin="V+"/>
 <wire x1="58.42" y1="205.74" x2="48.26" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="3V3" gate="G$1" pin="TP"/>
+<pinref part="+3V86" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="COL10" class="0">
@@ -14457,8 +14498,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U1" gate="U$1" pin="GP28"/>
-<wire x1="147.32" y1="210.82" x2="160.02" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="210.82" x2="162.56" y2="210.82" width="0.1524" layer="91"/>
 <label x="152.4" y="210.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="NEOPIXEL" gate="G$1" pin="TP"/>
+<wire x1="48.26" y1="226.06" x2="55.88" y2="226.06" width="0.1524" layer="91"/>
+<label x="55.88" y="226.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -14592,8 +14638,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <net name="N$8" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="TIP"/>
-<wire x1="66.04" y1="144.78" x2="50.8" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="144.78" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="1"/>
+<pinref part="M" gate="G$1" pin="TP"/>
+<wire x1="53.34" y1="144.78" x2="50.8" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="152.4" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
+<junction x="53.34" y="144.78"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -14602,7 +14652,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="66.04" y1="139.7" x2="55.88" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="139.7" x2="55.88" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="137.16" x2="50.8" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="137.16" x2="53.34" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="3VM" gate="G$1" pin="TP"/>
+<wire x1="53.34" y1="137.16" x2="50.8" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="129.54" x2="53.34" y2="137.16" width="0.1524" layer="91"/>
+<junction x="53.34" y="137.16"/>
 </segment>
 </net>
 <net name="MIDI_OUT" class="0">
