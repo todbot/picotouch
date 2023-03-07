@@ -72,14 +72,24 @@ void loop() {
 
 int notes_on = 0; // currently pressed notes
 
+void readTouchesTest() { 
+  for ( int i = 0; i < touch_count; i++) {
+    touches[i].update();
+  }
+  Serial.println(touches[0].raw_value);
+  delay(10);
+}
+
 // read our touch keys, maybe output midi
 void readTouches() {
+  uint32_t now = millis();
+  
   // key handling
   for ( int i = 0; i < touch_count; i++) {
     touches[i].update();
 
     if ( touches[i].rose() ) {
-      Serial.printf("press       %d %d %d\n", i, touches[i].raw_val_last, touches[i].threshold);
+      Serial.printf("press       %d %d %d\n", i, touches[i].raw_value, touches[i].threshold);
       digitalWrite(PIN_LED, HIGH);
 
       if ( i == oct_up_index ) {
@@ -120,7 +130,7 @@ void readTouches() {
     }
 
     if ( touches[i].fell() ) {
-      Serial.printf("    release %d %d %d\n", i, touches[i].raw_val_last, touches[i].threshold);
+      Serial.printf("    release %d %d %d\n", i, touches[i].raw_value, touches[i].threshold);
       digitalWrite(PIN_LED, LOW);
       //Serial.printf("released %d\n", i);
       if ( i == oct_up_index ) {
@@ -144,5 +154,5 @@ void readTouches() {
       }
     }
   }
-
+  //Serial.printf("touch elapsed: %ld\n", millis() - now);
 }

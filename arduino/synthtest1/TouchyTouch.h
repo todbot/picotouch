@@ -2,7 +2,7 @@
  * TouchyTouch - Simple capacitive sense touch library that mimics how CircuitPython touchio works
  *               But also with debounced rose() / fell() events
  *
- * 1 Dec 2022 - @todbot / Tod Kurt
+ * 7 Mar 2023 - @todbot / Tod Kurt
  *
  * See: https://gist.github.com/todbot/27c34c55d36002c601b2c28ae8f1b8a4
  * more really: https://github.com/adafruit/circuitpython/blob/main/shared-module/touchio/TouchIn.c
@@ -13,7 +13,8 @@
 // -- increased N_SAMPLES from 10 to 20
 // -- included an simple 5-read average on creating initial threshold
 
-#define N_SAMPLES 20
+#define N_SAMPLES 20         // default is 10 in touchio, 15-20 works better on picotouch
+#define CHARGE_MICROS 10     // default is 10 in touchio
 #define TIMEOUT_TICKS 10000
 
 class TouchyTouch
@@ -23,10 +24,10 @@ class TouchyTouch
 
   // set up a particular touch pin, automatically sets threshold and debounce_interval
   // but those can be changed later for tuning
-  void begin(int apin = -1) {
+  void begin(int apin = -1, uint16_t debounce_millis=20) {
     pin = apin;
     recalibrate();
-    debounce_interval = 10;
+    debounce_interval = debounce_millis;
     last_state = false;
     changed = false;
   }
@@ -34,10 +35,10 @@ class TouchyTouch
   void recalibrate() {
     const int num_reads = 5;
     for(int i=0; i<num_reads; i++) {
-      raw_val_last += rawRead();
+      raw_value += rawRead();
     }
-    raw_val_last /= num_reads;
-    threshold = (raw_val_last * 1.05); 
+    raw_value /= num_reads;
+    threshold = (raw_value * 1.05); 
   }
 
   // call update() as fast as possible
@@ -64,8 +65,8 @@ class TouchyTouch
 
   // cause a read to happen, return true if above threshold
   bool isTouched() {
-    raw_val_last = rawRead();
-    return (raw_val_last > threshold);
+    raw_value = rawRead();
+    return (raw_value > threshold);
   }
 
   // do the actual touch detection
@@ -75,7 +76,7 @@ class TouchyTouch
       // set pad to digital output high for 10us to charge it
       pinMode(pin, OUTPUT);
       digitalWrite(pin, HIGH);
-      delayMicroseconds(10);
+      delayMicroseconds(CHARGE_MICROS);
       // set pad back to an input and take some samples
       pinMode(pin, INPUT);
       while ( digitalRead(pin) ) {
@@ -94,5 +95,5 @@ class TouchyTouch
   bool changed;
   uint16_t threshold;
   int pin;
-  uint16_t raw_val_last; // for debugging
+  uint16_t raw_value;
 };

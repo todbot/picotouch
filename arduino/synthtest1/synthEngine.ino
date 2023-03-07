@@ -1,3 +1,7 @@
+/**
+ * Simple monosynth in Mozzi running on core1 of arduino-pico
+ * 
+ */
 #include <MozziGuts.h>
 #include <Oscil.h>
 #include <tables/saw_analogue512_int8.h> // oscillator waveform
@@ -42,7 +46,6 @@ void synthNoteOn(int note) {
 }
 
 void synthNoteOff(int note) {
-  Serial.println("noteOff!");
   envelope.noteOff();
 }
 

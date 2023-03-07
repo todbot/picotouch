@@ -223,10 +223,10 @@ LED1-LED40 - SK6812MINI-E (rev. mount)</text>
 <wire x1="97.79" y1="96.012" x2="97.79" y2="81.534" width="0.1524" layer="22"/>
 <wire x1="97.79" y1="81.534" x2="59.69" y2="81.534" width="0.1524" layer="22"/>
 <wire x1="59.69" y1="81.534" x2="59.69" y2="96.012" width="0.1524" layer="22"/>
-<wire x1="62.738" y1="94.996" x2="94.488" y2="94.996" width="0.254" layer="20"/>
-<wire x1="94.488" y1="94.996" x2="94.488" y2="82.804" width="0.254" layer="20"/>
-<wire x1="94.488" y1="82.804" x2="62.738" y2="82.804" width="0.254" layer="20"/>
-<wire x1="62.738" y1="82.804" x2="62.738" y2="94.996" width="0.254" layer="20"/>
+<wire x1="61.976" y1="94.996" x2="93.98" y2="94.996" width="0.254" layer="20"/>
+<wire x1="93.98" y1="94.996" x2="93.98" y2="82.804" width="0.254" layer="20"/>
+<wire x1="93.98" y1="82.804" x2="61.976" y2="82.804" width="0.254" layer="20"/>
+<wire x1="61.976" y1="82.804" x2="61.976" y2="94.996" width="0.254" layer="20"/>
 <text x="117.602" y="93.218" size="1.27" layer="26" ratio="12" rot="MR0">Qwiic / StemmaQT</text>
 <text x="155.956" y="83.312" size="1.778" layer="26" ratio="12" rot="MR0">MIDI TRS-A OUT</text>
 <text x="32.766" y="78.74" size="1.778" layer="26" ratio="12" rot="MR0">Raspberry Pi Pico</text>
