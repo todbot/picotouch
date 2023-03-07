@@ -20,7 +20,7 @@ int midi_velocity = 64;  // midpoint
 int midi_channel = 1;    // 1-16
 int midi_cc_num = 1;     // 1 = standard modwheel
 
-const int touch_threshold_adjust = 100;
+const int touch_threshold_adjust = 300;
 
 const int touch_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22};
 const int touch_count = sizeof(touch_pins) / sizeof(int);
@@ -65,7 +65,7 @@ void loop() {
     touches[i].update();
 
     if ( touches[i].rose() ) {
-      Serial.printf("pressed %d %d %d\n", i, touches[i].raw_val_last, touches[i].threshold);
+      Serial.printf("press       %d %d %d\n", i, touches[i].raw_value, touches[i].threshold);
       digitalWrite(PIN_LED, HIGH);
 
       if ( i == oct_up_index ) {
@@ -103,9 +103,8 @@ void loop() {
     }
 
     if ( touches[i].fell() ) {
-      Serial.printf("released %d %d %d\n", i, touches[i].raw_val_last, touches[i].threshold);
+      Serial.printf("    release %d %d %d\n", i, touches[i].raw_value, touches[i].threshold);
       digitalWrite(PIN_LED, LOW);
-      //Serial.printf("released %d\n", i);
       if ( i == oct_up_index ) {
       }
       else if ( i == oct_down_index ) {
@@ -124,20 +123,4 @@ void loop() {
     }
   }
 
-  delay(5);
 }
-
-//      if( i > 0 && i < 17 ) { // notes
-//        Serial.printf("noteOn %d %d %d\n", i, midi_base_note+i, midi_velocity);
-//        MIDIusb.sendNoteOn(midi_base_note + i, midi_velocity, midi_channel);
-//      }
-//      else if( i== 13 ) { // up
-//        //midi_base_note += 12;
-//      }
-//      else if( i== 14 ) { // down
-//        //midi_base_note -= 12;
-//      }
-//      else if( i== 15 ) { // select
-//        //sound_mode = (sound_mode + 1) % 3;
-//        //handleProgramChange(sound_mode);
-//      }

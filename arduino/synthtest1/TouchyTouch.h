@@ -16,6 +16,7 @@
 #define N_SAMPLES 20         // default is 10 in touchio, 15-20 works better on picotouch
 #define CHARGE_MICROS 10     // default is 10 in touchio
 #define TIMEOUT_TICKS 10000
+#define OUTPUT_STYLE OUTPUT_8MA
 
 class TouchyTouch
 {
@@ -74,7 +75,7 @@ class TouchyTouch
     uint16_t ticks = 0;
     for (uint16_t i = 0; i < N_SAMPLES; i++) {
       // set pad to digital output high for 10us to charge it
-      pinMode(pin, OUTPUT);
+      pinMode(pin, OUTPUT_STYLE);
       digitalWrite(pin, HIGH);
       delayMicroseconds(CHARGE_MICROS);
       // set pad back to an input and take some samples
