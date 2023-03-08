@@ -9,14 +9,10 @@
  *
  */
 
-// Note: this verison has been slightly modified in attempt to make it less twitchy:
-// -- increased N_SAMPLES from 10 to 20
-// -- included an simple 5-read average on creating initial threshold
-
-#define N_SAMPLES 20         // default is 10 in touchio, 15-20 works better on picotouch
+#define N_SAMPLES 10         // default is 10 in touchio, 15-20 works better on picotouch?
 #define CHARGE_MICROS 10     // default is 10 in touchio
 #define TIMEOUT_TICKS 10000
-#define OUTPUT_STYLE OUTPUT_8MA
+#define OUTPUT_STYLE OUTPUT_12MA  // matches 12mA outputs of CircuitPython
 
 class TouchyTouch
 {
@@ -25,7 +21,7 @@ class TouchyTouch
 
   // set up a particular touch pin, automatically sets threshold and debounce_interval
   // but those can be changed later for tuning
-  void begin(int apin = -1, uint16_t debounce_millis=20) {
+  void begin(int apin = -1, uint16_t debounce_millis=10) {
     pin = apin;
     recalibrate();
     debounce_interval = debounce_millis;
