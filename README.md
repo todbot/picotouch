@@ -22,7 +22,7 @@ And check out [picotouch videos on my Youtube channel](https://www.youtube.com/@
 
 ## Materials needed
 
-If you [buy a black picotouch board from my Tindie store]((https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/)), the <b>resistors are soldered</b> for you, so you only need to
+If you [buy a black 'picotouch SMD' board from my Tindie store](https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/), the <b>resistors are soldered</b> for you, so you only need to
 [solder the Pico](https://www.youtube.com/watch?v=dW9LiOq3Dso).
 
 If you're building one by hand, you will need:
