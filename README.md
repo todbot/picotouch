@@ -14,8 +14,6 @@ Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
 https://user-images.githubusercontent.com/274093/216477797-90a1e4ca-b68f-4eb2-be46-de1d6d81551e.mp4
 
 
-https://user-images.githubusercontent.com/274093/115614719-dfea2d80-a2a2-11eb-9ef7-c71edfc8e3df.mp4
-
 Also see videos in this Twitter thread : https://twitter.com/todbot/status/1382469033061093377
 
 And check out [picotouch videos on my Youtube channel](https://www.youtube.com/@todbot/search?query=picotouch)
