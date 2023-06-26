@@ -21,22 +21,28 @@ Also see videos in this Twitter thread : https://twitter.com/todbot/status/13824
 And check out [picotouch videos on my Youtube channel](https://www.youtube.com/@todbot/search?query=picotouch)
 
 ## Materials needed
+
+If you [buy a black picotouch board from my Tindie store]((https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/)), the <b>resistors are soldered</b> for you, so you only need to
+[solder the Pico](https://www.youtube.com/watch?v=dW9LiOq3Dso).
+
+If you're building one by hand, you will need:
 - 1 - picotouch PCB ([order from OSHpark](https://oshpark.com/shared_projects/5MnI1jPf))
 - 1 - Raspberry Pi Pico
 - 23 - 1M ohm 0805 SMD resistors  ([Digikey cart with this & Pico](https://www.digikey.com/short/w381rn4w))
 
 
-## How to solder
+## How to solder the Pico
 
-It's not too bad!  A pretty easy first-time SMD soldering project.  Here's how to solder the Pico down.
+It's not too bad!  A pretty easy first-time SMD soldering project.  Here's
+[how to solder the Pico down](https://www.youtube.com/watch?v=dW9LiOq3Dso).
 The technique is: line up the Pico solder one corner, solder the other, then finish all the rest.
-In the video you see I don't get it aligned perfectly straight (hard to see around the camera), but it still works great!
+In the video you see I don't get it aligned perfectly straight (hard to see around the camera), but it still works great!  ([Youtube version of the below video](https://www.youtube.com/watch?v=dW9LiOq3Dso))
 
 https://user-images.githubusercontent.com/274093/217670870-b04d55ed-e37d-4be2-bea7-4985d2b3f8c4.mp4
 
 
 
-## Installation
+## Firmware Installation
 
 * Install CircuitPython
   - Hold down BOOT button while plugging in Pico to get RPI-RP2 drive
