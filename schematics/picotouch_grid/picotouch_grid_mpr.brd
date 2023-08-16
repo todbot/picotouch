@@ -8,7 +8,7 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -211,7 +211,7 @@
 <text x="97.536" y="101.854" size="1.778" layer="22" ratio="12" rot="MR0">picotouch_grid - 
   capsense touch grid keyboard 
   for Raspberry Pi Pico</text>
-<text x="82.55" y="2.54" size="1.778" layer="22" ratio="12" rot="MR0">https://github.com/todbot/picotouch - 27 Mar 2023 - @todbot</text>
+<text x="82.55" y="2.54" size="1.778" layer="22" ratio="12" rot="MR0">https://github.com/todbot/picotouch - 7 Apr 2023 - @todbot</text>
 <text x="149.86" y="2.54" size="1.778" layer="26" rot="MR0">JLCJLCJLCJLC</text>
 <text x="135.636" y="81.28" size="1.016" layer="22" ratio="10" rot="MR0" align="top-left">optional I2C OLED display
 optional LiPo battery BFF
@@ -3848,8 +3848,9 @@ einem neuen Namen ab.</description>
 <contactref element="U5" pad="2"/>
 <wire x1="83.928" y1="21.212" x2="83.928" y2="21.99" width="0.2032" layer="16"/>
 <wire x1="83.928" y1="21.99" x2="83.565996875" y2="22.352003125" width="0.2032" layer="16"/>
-<wire x1="83.565996875" y1="22.352003125" x2="83.058" y2="22.352" width="0.2032" layer="16"/>
+<wire x1="83.565996875" y1="22.352003125" x2="83.058003125" y2="22.352" width="0.2032" layer="16"/>
 <via x="83.058" y="22.352" extent="1-16" drill="0.3937"/>
+<wire x1="83.058003125" y1="22.352" x2="83.058" y2="22.352" width="0.2032" layer="16"/>
 <wire x1="84.018471875" y1="39.171528125" x2="84.018471875" y2="38.663528125" width="0.2032" layer="1"/>
 <wire x1="84.018471875" y1="38.663528125" x2="84.018471875" y2="23.820471875" width="0.2032" layer="1"/>
 <wire x1="84.018471875" y1="23.820471875" x2="83.058" y2="22.86" width="0.2032" layer="1"/>
@@ -3866,6 +3867,13 @@ einem neuen Namen ab.</description>
 <wire x1="83.312" y1="73.66" x2="83.312" y2="73.152" width="0.2032" layer="16"/>
 <wire x1="96.844" y1="101.53" x2="98.552" y2="99.822" width="0.2032" layer="16"/>
 <wire x1="98.552" y1="99.822" x2="98.552" y2="91.694" width="0.2032" layer="16"/>
+<contactref element="U5" pad="4"/>
+<wire x1="84.728" y1="21.212" x2="84.728" y2="21.99" width="0.1778" layer="16"/>
+<wire x1="85.598" y1="22.86" x2="85.598" y2="23.876" width="0.1778" layer="16"/>
+<wire x1="85.598" y1="23.876" x2="84.074" y2="23.876" width="0.1778" layer="16"/>
+<wire x1="84.074" y1="23.876" x2="83.058003125" y2="22.860003125" width="0.1778" layer="16"/>
+<wire x1="83.058003125" y1="22.860003125" x2="83.058003125" y2="22.352" width="0.1778" layer="16"/>
+<wire x1="84.728" y1="21.99" x2="85.598" y2="22.86" width="0.1778" layer="16"/>
 </signal>
 <signal name="SDA">
 <contactref element="DISP1" pad="4"/>
@@ -3897,14 +3905,11 @@ einem neuen Namen ab.</description>
 <wire x1="84.728" y1="38.9888125" x2="84.796565625" y2="39.057378125" width="0.2032" layer="16"/>
 <wire x1="84.596625" y1="23.14575" x2="84.596625" y2="39.057378125" width="0.2032" layer="1"/>
 <wire x1="84.328" y1="38.5888125" x2="84.728" y2="38.9888125" width="0.2032" layer="16"/>
-<contactref element="U5" pad="4"/>
 <contactref element="U5" pad="3"/>
 <wire x1="84.328" y1="21.212" x2="84.328" y2="22.86" width="0.2032" layer="16"/>
 <wire x1="84.596625" y1="23.128625" x2="84.596625" y2="23.14575" width="0.2032" layer="16"/>
 <via x="84.596625" y="23.14575" extent="1-16" drill="0.3937"/>
 <wire x1="84.328" y1="22.86" x2="84.596625" y2="23.128625" width="0.2032" layer="16"/>
-<wire x1="84.728" y1="21.212" x2="84.728" y2="22.99725" width="0.2032" layer="16"/>
-<wire x1="84.728" y1="22.99725" x2="84.596625" y2="23.128625" width="0.2032" layer="16"/>
 <contactref element="R6" pad="2"/>
 <wire x1="84.596625" y1="73.674625" x2="84.596625" y2="73.152" width="0.2032" layer="1"/>
 <wire x1="84.596625" y1="73.152" x2="84.596625" y2="56.16575" width="0.2032" layer="1"/>
@@ -4217,9 +4222,9 @@ einem neuen Namen ab.</description>
 <contactref element="LED31" pad="4-DIN"/>
 <contactref element="LED30" pad="2-DOUT"/>
 <wire x1="163.83" y1="23.114" x2="87.63" y2="22.86" width="0.254" layer="16"/>
-<wire x1="87.63" y1="22.86" x2="86.36" y2="24.13" width="0.254" layer="16"/>
-<wire x1="86.36" y1="24.13" x2="82.296" y2="24.13" width="0.254" layer="16"/>
-<wire x1="82.296" y1="24.13" x2="81.026" y2="22.86" width="0.254" layer="16"/>
+<wire x1="87.63" y1="22.86" x2="86.106" y2="24.384" width="0.254" layer="16"/>
+<wire x1="86.106" y1="24.384" x2="82.55" y2="24.384" width="0.254" layer="16"/>
+<wire x1="82.55" y1="24.384" x2="81.026" y2="22.86" width="0.254" layer="16"/>
 <wire x1="81.026" y1="22.86" x2="5.08" y2="22.86" width="0.254" layer="16"/>
 <wire x1="2.54" y1="12.7" x2="3.29" y2="11.95" width="0.254" layer="16"/>
 <wire x1="3.29" y1="11.95" x2="7.51" y2="11.95" width="0.254" layer="16"/>
