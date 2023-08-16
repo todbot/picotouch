@@ -12353,65 +12353,65 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <parts>
 <part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO" device="SMD" override_package3d_urn="urn:adsk.eagle:package:27895017/2" override_package_urn="urn:adsk.eagle:footprint:27895018/1" override_locally_modified="yes" value="RASPBERRY_PICOSMD"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP1" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP2" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP3" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP4" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP5" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP6" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP7" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP8" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP9" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="TP10" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP11" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP12" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP13" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP14" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP15" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP16" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
+<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1M"/>
 <part name="TP17" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="A" package3d_urn="urn:adsk.eagle:package:27542649/4"/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP18" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="B" package3d_urn="urn:adsk.eagle:package:35535445/3"/>
 <part name="TP19" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="B" package3d_urn="urn:adsk.eagle:package:35535445/3"/>
 <part name="TP20" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="B" package3d_urn="urn:adsk.eagle:package:35535445/3"/>
-<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
+<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1M"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
+<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1M"/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
+<part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1M"/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="220"/>
@@ -12563,16 +12563,12 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="C20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100n"/>
 <part name="GND72" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V41" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="GND73" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="+3V42" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="GND74" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="+3V43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="TP21" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="B" package3d_urn="urn:adsk.eagle:package:35535445/3"/>
-<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
+<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1M"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP22" library="todstuff" library_urn="urn:adsk.eagle:library:1731349" deviceset="TOUCHPAD" device="B" package3d_urn="urn:adsk.eagle:package:35535445/3"/>
-<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
+<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1M"/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -13234,18 +13230,6 @@ stereo cables. Does not work w/ mono cables</text>
 <instance part="+3V41" gate="G$1" x="365.76" y="-53.34" smashed="yes">
 <attribute name="VALUE" x="364.744" y="-53.34" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND73" gate="1" x="403.86" y="-88.9" smashed="yes">
-<attribute name="VALUE" x="401.32" y="-91.44" size="1.778" layer="96"/>
-</instance>
-<instance part="+3V42" gate="G$1" x="408.94" y="-58.42" smashed="yes">
-<attribute name="VALUE" x="407.924" y="-58.42" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND74" gate="1" x="391.16" y="-66.04" smashed="yes">
-<attribute name="VALUE" x="388.62" y="-68.58" size="1.778" layer="96"/>
-</instance>
-<instance part="+3V43" gate="G$1" x="391.16" y="-53.34" smashed="yes">
-<attribute name="VALUE" x="390.144" y="-53.34" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="+3V44" gate="G$1" x="132.08" y="93.98" smashed="yes" rot="R90">
 <attribute name="VALUE" x="132.08" y="92.964" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -13903,8 +13887,8 @@ stereo cables. Does not work w/ mono cables</text>
 <pinref part="R21" gate="G$1" pin="1"/>
 <wire x1="-5.08" y1="-106.68" x2="-5.08" y2="-96.52" width="0.1524" layer="91"/>
 <junction x="-5.08" y="-106.68"/>
-<wire x1="-5.08" y1="-96.52" x2="7.62" y2="-96.52" width="0.1524" layer="91"/>
-<label x="2.54" y="-96.52" size="1.778" layer="95"/>
+<wire x1="-5.08" y1="-96.52" x2="22.86" y2="-96.52" width="0.1524" layer="91"/>
+<label x="12.7" y="-96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GP28" class="0">
@@ -13918,8 +13902,8 @@ stereo cables. Does not work w/ mono cables</text>
 <pinref part="R22" gate="G$1" pin="1"/>
 <wire x1="-5.08" y1="-121.92" x2="-5.08" y2="-116.84" width="0.1524" layer="91"/>
 <junction x="-5.08" y="-121.92"/>
-<wire x1="-5.08" y1="-116.84" x2="7.62" y2="-116.84" width="0.1524" layer="91"/>
-<label x="2.54" y="-116.84" size="1.778" layer="95"/>
+<wire x1="-5.08" y1="-116.84" x2="22.86" y2="-116.84" width="0.1524" layer="91"/>
+<label x="12.7" y="-116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MIDI_IN" class="0">
@@ -14347,6 +14331,35 @@ stereo cables. Does not work w/ mono cables</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,12.7,71.12,U1,RUN,,,,"/>
+<approved hash="202,1,12.7,66.04,U1,ADC_REF,,,,"/>
+<approved hash="204,1,12.7,78.74,U1,3V3(OUT),,,,"/>
+<approved hash="202,1,12.7,73.66,U1,3V3_EN,,,,"/>
+<approved hash="204,1,12.7,81.28,U1,VSYS,,,,"/>
+<approved hash="204,1,-22.86,15.24,U1,SWGND,,,,"/>
+<approved hash="202,1,-22.86,17.78,U1,SWCLK,,,,"/>
+<approved hash="104,1,99.06,-15.24,LED1,VDD,+3V3,,,"/>
+<approved hash="104,1,124.46,-15.24,LED2,VDD,+3V3,,,"/>
+<approved hash="104,1,149.86,-15.24,LED3,VDD,+3V3,,,"/>
+<approved hash="104,1,175.26,-15.24,LED4,VDD,+3V3,,,"/>
+<approved hash="104,1,200.66,-15.24,LED5,VDD,+3V3,,,"/>
+<approved hash="104,1,226.06,-15.24,LED6,VDD,+3V3,,,"/>
+<approved hash="104,1,251.46,-15.24,LED7,VDD,+3V3,,,"/>
+<approved hash="104,1,276.86,-15.24,LED8,VDD,+3V3,,,"/>
+<approved hash="104,1,99.06,-60.96,LED9,VDD,+3V3,,,"/>
+<approved hash="104,1,124.46,-60.96,LED10,VDD,+3V3,,,"/>
+<approved hash="104,1,149.86,-60.96,LED11,VDD,+3V3,,,"/>
+<approved hash="104,1,175.26,-60.96,LED12,VDD,+3V3,,,"/>
+<approved hash="104,1,200.66,-60.96,LED13,VDD,+3V3,,,"/>
+<approved hash="104,1,226.06,-60.96,LED14,VDD,+3V3,,,"/>
+<approved hash="104,1,251.46,-60.96,LED15,VDD,+3V3,,,"/>
+<approved hash="104,1,276.86,-60.96,LED16,VDD,+3V3,,,"/>
+<approved hash="104,1,302.26,-60.96,LED17,VDD,+3V3,,,"/>
+<approved hash="104,1,332.74,-60.96,LED18,VDD,+3V3,,,"/>
+<approved hash="104,1,358.14,-60.96,LED19,VDD,+3V3,,,"/>
+<approved hash="104,1,383.54,-60.96,LED20,VDD,+3V3,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
