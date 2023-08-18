@@ -27,7 +27,6 @@ touch_pins = (
 )
 
 touchins = []  # for testing
-touchs = []
 for pin in touch_pins:
     touchin = touchio.TouchIn(pin)
     touchin.threshold += touch_threshold_adjust
@@ -36,7 +35,7 @@ for pin in touch_pins:
 print("\n----------")
 print("picotouch_test hello")
 while True:
-    for i in range(len(touchs)):
-        touch = touchs[i]
-        print("%d  " % touch.value[i], end='')
+    for i in range(len(touchins)):
+        touch = touchins[i]
+        print("%d  " % touch.value, end='')
     print()
