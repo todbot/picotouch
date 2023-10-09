@@ -8,6 +8,9 @@ Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
 [For sale on Tindie!](https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/)
 
 
+If you're looking for the synthesizer version,
+that's at [github.com/todbot/picotouch_synth](https://github.com/todbot/picotouch_synth)
+
 ## Demos
 
 

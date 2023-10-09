@@ -15,6 +15,7 @@
 import time
 import board
 import touchio
+from adafruit_debouncer import Debouncer, Button
 
 touch_threshold_adjust = 300
 
@@ -26,15 +27,17 @@ touch_pins = (
     board.GP22,
 )
 
-touchins = []  # for testing
-touchs = []
+touch_ins = []  # for debug
+touch_pads = []
 for pin in touch_pins:
     touchin = touchio.TouchIn(pin)
     touchin.threshold += touch_threshold_adjust
-    touchins.append(touchin)
+    touch_pads.append( Button(touchin, value_when_pressed=True))
+    touch_ins.append(touchin)  # for debug
+    num_touch_pads = len(touch_pads)
 
 print("\n----------")
-print("picotouch_test hello")
+print("picotouch hwtest hello")
 while True:
     for i in range(len(touchs)):
         touch = touchs[i]
