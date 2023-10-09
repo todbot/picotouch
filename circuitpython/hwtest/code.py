@@ -39,7 +39,7 @@ for pin in touch_pins:
 print("\n----------")
 print("picotouch hwtest hello")
 while True:
-    for i in range(len(touchs)):
-        touch = touchs[i]
-        print("%d  " % touch.value[i], end='')
+    for i in range(len(touchins)):
+        touch = touchins[i]
+        print("%d  " % touch.value, end='')
     print()
