@@ -90,4 +90,5 @@ There's other things you can do with the picotouch board.
 
 ## Press
 
-- https://www.hackster.io/news/tod-kurt-s-ultra-slim-picotouch-is-a-button-free-23-key-raspberry-pi-pico-powered-midi-keyboard-700a3ce2227b
+- https://www.hackster.io/news/tod-kurt-s-ultra-slim-picotouch-is-a-button-free-23-key-raspberry-pi-pico-powered-midi-keyboard-700a3ce2227b (26 Feb 2023)
+- https://www.raspberrypi.com/news/picotouch-synthesiser-magpimonday/ (22 Nov 2023)
