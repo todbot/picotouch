@@ -1,11 +1,11 @@
 # picotouch
 
-Tiny capsense touch MIDI keyboard from a Raspberry Pi Pico
-
+Tiny capsense touch USB MIDI keyboard from a Raspberry Pi Pico
+<img width=700 src="./docs/picotouch_photo1.jpg"/>
 <img width=700 src="./docs/picotouch_smd_top1.png"/>
 <img width=700 src="./docs/picotouch_top2.png"/>
 
-[For sale on Tindie!](https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/)
+<a href="https://www.tindie.com/products/todbot/picotouch-capsense-midi-keyboard-for-raspi-pico/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-smalls.png" alt="PicoTouch on Tindie" width="200" height="55"></a>
 
 
 If you're looking for the synthesizer version,
