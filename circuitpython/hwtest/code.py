@@ -27,14 +27,14 @@ touch_pins = (
     board.GP22,
 )
 
-touch_ins = []  # for debug
+touchins = []  # for debug
 touch_pads = []
 for pin in touch_pins:
     touchin = touchio.TouchIn(pin)
     touchin.threshold += touch_threshold_adjust
     touch_pads.append( Button(touchin, value_when_pressed=True))
-    touch_ins.append(touchin)  # for debug
-    num_touch_pads = len(touch_pads)
+    touchins.append(touchin)  # for debug
+num_touch_pads = len(touch_pads)
 
 print("\n----------")
 print("picotouch hwtest hello")
