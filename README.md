@@ -28,7 +28,7 @@ If you [buy a black 'picotouch SMD' board from my Tindie store](https://www.tind
 
 If you're building one by hand, you will need:
 - 1 - picotouch PCB ([order from OSHpark](https://oshpark.com/shared_projects/5MnI1jPf))
-- 1 - Raspberry Pi Pico  (**(NOTE: this board will NOT work with the Pico2, since its RP2350 chip has a hardware error)**
+- 1 - Raspberry Pi Pico  (**(NOTE: Not the Pico2, since its RP2350 chip has a hardware error)**
 - 23 - 1M ohm 0805 SMD resistors  ([Digikey cart with this & Pico](https://www.digikey.com/short/w381rn4w))
 
 
